@@ -3,6 +3,8 @@ import express from "express";
 import cors from "cors";
 import indexRoutes from "./routes/index.js";
 import createError from "http-errors";
+import charactersRoutes from "./routes/characters.js";
+import partsRoutes from "./routes/parts.js";
 
 /* Clear the console  */
 console.log("\x1Bc");
@@ -36,6 +38,8 @@ app.use(
 
 /* Routes */
 app.use("/", indexRoutes);
+app.use("/api/characters", charactersRoutes);
+app.use("/api/parts", partsRoutes);
 
 /* Error handler  */
 // catch 404 and forward to error handler
