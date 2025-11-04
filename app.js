@@ -2,6 +2,7 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import indexRoutes from "./routes/index.js";
+import createError from "http-errors";
 
 /* Clear the console  */
 console.log("\x1Bc");

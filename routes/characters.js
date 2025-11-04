@@ -17,9 +17,15 @@ router.get("/:id", async (req, res) => {
 
 // POST create character
 router.post("/", async (req, res) => {
-  const newCharacter = new Character(req.body);
-  const saved = await newCharacter.save();
-  res.status(201).json(saved);
+  try {
+    const newCharacter = new Character(req.body);
+    const saved = await newCharacter.save();
+    res.status(201).json(saved);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: err.message });
+  }
 });
+
 
 export default router;
