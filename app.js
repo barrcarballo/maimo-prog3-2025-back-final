@@ -38,8 +38,8 @@ app.use(
 
 /* Routes */
 app.use("/", indexRoutes);
-app.use("/api/characters", charactersRoutes);
-app.use("/api/parts", partsRoutes);
+app.use("/characters", charactersRoutes);
+app.use("/parts", partsRoutes);
 
 /* Error handler  */
 // catch 404 and forward to error handler
