@@ -9,7 +9,7 @@ router.get("/", async (req, res) => {
   res.json(parts);
 });
 
-// GET parts by type (para filtrar por cabeza, ojos, etc.)
+// GET parts by type
 router.get("/:type", async (req, res) => {
   const parts = await Part.find({ type: req.params.type });
   res.json(parts);
